@@ -14,3 +14,11 @@ data/raw/
 
 # Other unrelated
 anaconda_projects/
+
+# --- Auto-generated files in processed/ (DO NOT TRACK) ---
+data/processed/*.png
+data/processed/*.csv
+data/processed/*.xlsx
+# 但手动整理的两个核心文件除外
+!data/processed/R&D.xlsx
+!data/processed/revenue&profit rate.xlsx
