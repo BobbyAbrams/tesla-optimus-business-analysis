@@ -32,3 +32,5 @@ data/processed/*.xlsx
 !data/processed/R&D.xlsx
 !data/processed/revenue and profit margin.xlsx
 !data/processed/cash flow.xlsx
+
+!data/processed/Tesla_Financial_Forecast_Model.xlsx
