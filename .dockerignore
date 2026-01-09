@@ -1,0 +1,16 @@
+# 忽略文件
+.git
+.gitignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.vscode/
+.idea/
+*.sqlite3
+*.db
+.DS_Store
+*.backup
