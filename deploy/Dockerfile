@@ -1,30 +1,35 @@
-# 使用官方Python 3.11 slim镜像作为基础
-FROM python:3.11-slim
+FROM python:3.10-slim
 
-# 设置工作目录
 WORKDIR /app
 
-# 1. 安装系统依赖：包括编译工具、pandas/numpy所需的库，以及清理缓存以减小镜像体积
+# 安装最小系统依赖
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     gcc \
     g++ \
-    build-essential \
-    libgomp1 \
-    libgl1-mesa-glx \
+    && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# 2. 将依赖文件复制到容器中
+# 升级 pip
+RUN pip install --no-cache-dir --upgrade pip
+
+# 复制依赖文件
 COPY requirements.txt .
 
-# 3. 安装Python依赖（使用国内镜像源加速，可选项）
-RUN pip install --no-cache-dir -r requirements.txt
+# 分步安装（确保核心包先安装）
+RUN pip install --no-cache-dir numpy==1.24.3 && \
+    pip install --no-cache-dir pandas==1.5.3 && \
+    pip install --no-cache-dir -r requirements.txt
 
-# 4. 将应用代码复制到容器中
+# 复制应用代码
 COPY . .
 
-# 5. 暴露端口（Render会覆盖这个端口，但声明它是一个好习惯）
+# 暴露端口
 EXPOSE 8050
 
-# 6. 定义启动命令
-CMD ["gunicorn", "app:server"]
+# 环境变量
+ENV PYTHONUNBUFFERED=1
+ENV PORT=8050
+
+# 启动命令
+CMD ["gunicorn", "--bind", "0.0.0.0:8050", "--workers", "2", "app:server"]

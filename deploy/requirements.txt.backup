@@ -1,0 +1,8 @@
+# 使用兼容性更好的版本
+pandas==1.5.3        # 降级到稳定的 1.x 版本
+numpy==1.24.3        # 兼容 pandas 1.5.3
+plotly==5.18.0
+dash==2.14.2
+dash-bootstrap-components==1.5.0
+gunicorn==21.2.0     # 添加 Gunicorn 用于生产环境
+flask==2.3.3         # Dash 的底层依赖
