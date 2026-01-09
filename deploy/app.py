@@ -50,3 +50,6 @@ if __name__ == '__main__':
     print(f"🚀 Starting Tesla Optimus Business Analysis on port {port}")
     print(f"📊 Application ready at http://0.0.0.0:{port}")
     app.run(host='0.0.0.0', port=port, debug=False)
+
+# Export for Gunicorn
+server = app.server
