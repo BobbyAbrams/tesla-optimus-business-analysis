@@ -1,5 +1,6 @@
-# 最小依赖集
-flask==2.2.5
-dash==2.9.3
-pandas==1.5.3
-numpy==1.23.5
+# 保证能在 Render 上构建的版本
+pandas==2.1.4
+numpy==1.26.4
+dash==2.14.2
+dash-bootstrap-components==1.5.0
+plotly==5.18.0
