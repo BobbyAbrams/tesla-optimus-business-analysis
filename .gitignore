@@ -60,3 +60,4 @@ data/processed/*.xlsx
 !data/processed/revenue and profit margin.xlsx
 !data/processed/Tesla_All_Sheets_Scenarios.xlsx
 !data/processed/Tesla_Financial_Forecast_Model.xlsx
+deploy/
