@@ -53,7 +53,6 @@ data/raw
 # --- 自动生成的数据文件（不要跟踪） ---
 data/processed/*.png
 data/processed/*.csv
-data/processed/*.xlsx
 # 但保留我们手动整理的核心文件 R&D.xlsx
 !data/processed/cash_flow.xlsx
 !data/processed/R&D.xlsx
