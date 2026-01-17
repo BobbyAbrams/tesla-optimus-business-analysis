@@ -68,3 +68,4 @@ data/raw
 data/processed/*.png
 data/processed/*.csv
 # 但保留我们手动整理的核心文件 R&D.xlsx
+notebooks/visualizations/
