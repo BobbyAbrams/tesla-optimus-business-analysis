@@ -62,3 +62,10 @@ data/processed/*.xlsx
 !data/processed/Tesla_Financial_Forecast_Model.xlsx
 deploy/
 deploy/
+
+anaconda_projects
+data/raw
+# --- 自动生成的数据文件（不要跟踪） ---
+data/processed/*.png
+data/processed/*.csv
+# 但保留我们手动整理的核心文件 R&D.xlsx
