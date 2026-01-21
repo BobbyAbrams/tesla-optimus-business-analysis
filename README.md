@@ -24,8 +24,8 @@ tesla-optimus-business-analysis/
 │   └── processed/         # Cleaned structured data (CSV/Excel)
 ├── notebooks/             # Jupyter Notebook
 │   └── 01_Tesla R&D trend analysis (2020-2024).ipynb
-├── src/                   # 可复用的源代码模块（可选，未来可加）
-├── reports/               # 生成的图表与静态报告（可选，未来可加）
-├── README.md              # 项目说明（本文档）
-└── LICENSE                # MIT 许可证
+├── src/                   # Reusable source code modules (optional)
+├── reports/              # Reusable source code modules (optional)
+├── README.md              # Reusable source code modules (optional)
+└── LICENSE                 # MIT License
 ```
